@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/route_manager.dart';
+
 import 'package:travel_app/src/onboard/view/onboard_view.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,7 +7,11 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
+    return MaterialApp(
+      theme: ThemeData(
+
+          // fontFamily: "Nunito",
+          ),
       home: OnboardView(),
     );
   }
