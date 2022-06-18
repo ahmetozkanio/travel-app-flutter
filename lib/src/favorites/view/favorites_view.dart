@@ -90,6 +90,9 @@ class FavoritesView extends StatelessWidget {
 
 Widget favoritesCityCard(context, index) {
   return Card(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(16.0),
+    ),
     child: Row(
       children: [
         Container(
