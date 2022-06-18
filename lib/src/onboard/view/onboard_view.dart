@@ -28,7 +28,6 @@ class OnboardView extends StatelessWidget {
                     controller: onboardViewController.pageController,
                     onPageChanged: (int page) {
                       onboardViewController.pageIndacatorIndex.value = page;
-                      print(page);
                     },
                     itemCount: onboardPages.length,
                     itemBuilder: (context, position) {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:travel_app/src/login/view/login_view.dart';
 import 'package:travel_app/src/onboard/model/onboard_model.dart';
 
 class OnboardViewController extends GetxController {
@@ -36,6 +37,8 @@ class OnboardViewController extends GetxController {
           curve: Curves.easeInOut,
         );
       }
+    } else if (onboardModelList.length > pageIndacatorIndex.value) {
+      Get.to(() => LoginView());
     }
   }
 
