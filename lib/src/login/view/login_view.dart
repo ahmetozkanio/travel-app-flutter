@@ -20,20 +20,20 @@ class LoginView extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Image.asset("assets/city_tour.png"),
-                Text(
+                const Text(
                   "Login",
                   textAlign: TextAlign.left,
                   style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16.0,
                 ),
                 TextFormField(
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
-                    floatingLabelStyle: TextStyle(color: Colors.black),
+                    floatingLabelStyle: const TextStyle(color: Colors.black),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                      borderSide: const BorderSide(color: Colors.black),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     border: OutlineInputBorder(
@@ -42,83 +42,84 @@ class LoginView extends StatelessWidget {
                     labelText: "E-mail",
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16.0,
                 ),
                 TextFormField(
                   cursorColor: Colors.black,
                   decoration: InputDecoration(
-                    floatingLabelStyle: TextStyle(color: Colors.black),
+                    floatingLabelStyle: const TextStyle(color: Colors.black),
                     focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                      borderSide: const BorderSide(color: Colors.black),
                       borderRadius: BorderRadius.circular(4),
                     ),
-                    suffixIcon: Icon(
+                    suffixIcon: const Icon(
                       Icons.lock,
                       color: Colors.black,
                     ),
                     border: OutlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black, width: 5),
+                      borderSide:
+                          const BorderSide(color: Colors.black, width: 5),
                       borderRadius: BorderRadius.circular(4),
                     ),
                     labelText: "Password",
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16.0,
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
                       primary: Colors.black,
-                      fixedSize: Size(double.infinity, 52.0)),
-                  onPressed: () => Get.to(() => HomeView()),
+                      fixedSize: const Size(double.infinity, 52.0)),
+                  onPressed: () => Get.to(() => const HomeView()),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text(
+                      const Text(
                         "Login",
                         style: TextStyle(fontSize: 22.0),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 6.0,
                       ),
-                      Icon(
+                      const Icon(
                         Icons.arrow_forward,
                       )
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Forgot password"),
-                    SizedBox(
+                    const Text("Forgot password"),
+                    const SizedBox(
                       width: 8.0,
                     ),
                     InkWell(
                         onTap: () {},
-                        child: Text(
+                        child: const Text(
                           "Get New",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ))
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 16.0,
                 ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text("Do you have an account?"),
-                    SizedBox(
+                    const Text("Do you have an account?"),
+                    const SizedBox(
                       width: 8.0,
                     ),
                     InkWell(
                         onTap: () {},
-                        child: Text(
+                        child: const Text(
                           "Create New",
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ))

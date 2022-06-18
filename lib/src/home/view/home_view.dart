@@ -5,7 +5,7 @@ import '../actions/bottom_nav/bottom_nav_view.dart';
 import '../controller/home_view_controller.dart';
 
 class HomeView extends StatelessWidget {
-  HomeView({Key? key}) : super(key: key);
+  const HomeView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -29,5 +29,5 @@ PageView bodyPageView(
       controller: homeViewController.pageController,
       onPageChanged: homeViewController.onPageChanged,
       children: bottomNavPages(context),
-      physics: NeverScrollableScrollPhysics());
+      physics: const NeverScrollableScrollPhysics());
 }

@@ -25,7 +25,7 @@ List<TripsModel> trigsCardList = [
         TagsModel("Camping"),
         TagsModel("Huzur")
       ],
-      Color.fromARGB(255, 67, 198, 221)),
+      const Color.fromARGB(255, 67, 198, 221)),
   TripsModel(
       "City of Istanbul",
       "Istanbul, Turkey - 3 weeks",
@@ -37,7 +37,7 @@ List<TripsModel> trigsCardList = [
         TagsModel("Camping"),
         TagsModel("Huzur")
       ],
-      Color.fromARGB(255, 27, 239, 165)),
+      const Color.fromARGB(255, 27, 239, 165)),
   TripsModel(
       "Camping in Diyarbakir",
       "Diyarbakir, Turkey - 3 weeks",
@@ -49,5 +49,5 @@ List<TripsModel> trigsCardList = [
         TagsModel("Camping"),
         TagsModel("Huzur")
       ],
-      Color.fromARGB(255, 244, 244, 95))
+      const Color.fromARGB(255, 244, 244, 95))
 ];

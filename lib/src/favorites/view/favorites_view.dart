@@ -19,7 +19,7 @@ class FavoritesView extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Favorites",
                   style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
                 ),
@@ -31,7 +31,7 @@ class FavoritesView extends StatelessWidget {
               ],
             ),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SizedBox(
               height: 16.0,
             ),
@@ -43,7 +43,7 @@ class FavoritesView extends StatelessWidget {
               child: TextFormField(
                 textAlignVertical: TextAlignVertical.bottom,
                 cursorColor: Colors.black,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                   suffixIcon: Icon(
                     Icons.search,
                     color: Color.fromARGB(255, 109, 109, 109),
@@ -51,18 +51,18 @@ class FavoritesView extends StatelessWidget {
                   hintText: "search",
                   focusedBorder: OutlineInputBorder(),
                   border: OutlineInputBorder(
-                    borderSide: const BorderSide(color: Colors.black),
+                    borderSide: BorderSide(color: Colors.black),
                   ),
                 ),
               ),
             ),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: SizedBox(
               height: 16.0,
             ),
           ),
-          SliverToBoxAdapter(
+          const SliverToBoxAdapter(
             child: Text(
               "Around The World",
               style: TextStyle(fontSize: 34.0, fontWeight: FontWeight.bold),
@@ -109,7 +109,7 @@ Widget favoritesCityCard(context, index) {
           ),
         ),
         Container(
-          padding: EdgeInsets.all(8.0),
+          padding: const EdgeInsets.all(8.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -118,10 +118,10 @@ Widget favoritesCityCard(context, index) {
                 children: [
                   Text(
                     favoritesCardList[index].city,
-                    style:
-                        TextStyle(fontSize: 22.0, fontWeight: FontWeight.bold),
+                    style: const TextStyle(
+                        fontSize: 22.0, fontWeight: FontWeight.bold),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8.0,
                   ),
                   Text(
@@ -129,7 +129,7 @@ Widget favoritesCityCard(context, index) {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16.0,
               ),
               Container(
@@ -139,7 +139,7 @@ Widget favoritesCityCard(context, index) {
                   maxLines: 2,
                   softWrap: true,
                   favoritesCardList[index].content,
-                  style: TextStyle(fontSize: 18.0),
+                  style: const TextStyle(fontSize: 18.0),
                 ),
               ),
             ],

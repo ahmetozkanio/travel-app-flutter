@@ -5,7 +5,7 @@ import 'package:travel_app/src/trips/view/trips_view.dart';
 import '../../../favorites/view/favorites_view.dart';
 
 bottomNavPages(context) {
-  return [TripsView(), FavoritesView(), TripsView()];
+  return [const TripsView(), const FavoritesView(), const TripsView()];
 }
 
 BottomNavigationBar bottomNavBar(HomeViewController homeViewController) {
@@ -14,7 +14,7 @@ BottomNavigationBar bottomNavBar(HomeViewController homeViewController) {
       currentIndex: homeViewController.selectedIndex.value,
       unselectedItemColor: Colors.grey,
       selectedItemColor: Colors.black,
-      items: [
+      items: const [
         BottomNavigationBarItem(label: "Trips", icon: Icon(Icons.location_on)),
         BottomNavigationBarItem(label: "Favorites", icon: Icon(Icons.favorite)),
         BottomNavigationBarItem(label: "Settings", icon: Icon(Icons.settings)),

@@ -3,10 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:travel_app/src/onboard/controller/onboard_view_controller.dart';
 
-import '../model/onboard_model.dart';
-
 class OnboardView extends StatelessWidget {
-  OnboardView({Key? key}) : super(key: key);
+  const OnboardView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +20,7 @@ class OnboardView extends StatelessWidget {
           () => Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Container(
+              SizedBox(
                 height: MediaQuery.of(context).size.height / 1.5,
                 child: PageView.builder(
                     controller: onboardViewController.pageController,
@@ -51,7 +49,7 @@ class OnboardView extends StatelessWidget {
                   OutlinedButton(
                     onPressed: () =>
                         onboardViewController.skipIndicatorButton(),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
                         "Skip",
@@ -70,7 +68,7 @@ class OnboardView extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                       primary: Colors.black,
                     ),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.all(16.0),
                       child: Text(
                         "Next",
@@ -98,26 +96,28 @@ List<Widget> onboardPages = [
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          onboarList.image != '' ? Image.asset(onboarList.image) : Text(""),
+          onboarList.image != ''
+              ? Image.asset(onboarList.image)
+              : const Text(""),
           Text(
             onboarList.title,
-            style: TextStyle(
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               color: Colors.black,
               fontSize: 32.0,
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 32.0,
               right: 32.0,
             ),
             child: Text(
               onboarList.subTitle,
               textAlign: TextAlign.center,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 119, 118, 118),
+                color: const Color.fromARGB(255, 119, 118, 118),
                 fontSize: 14.0,
               ),
             ),

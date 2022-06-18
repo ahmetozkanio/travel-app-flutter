@@ -8,7 +8,7 @@ class TrigsCardDetailView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        iconTheme: IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         elevation: 0.0,
         backgroundColor: Colors.transparent,
       ),
@@ -18,50 +18,50 @@ class TrigsCardDetailView extends StatelessWidget {
           child: ListView(
             children: [
               Image.asset(tripsModel.image),
-              SizedBox(
+              const SizedBox(
                 height: 16.0,
               ),
               Text(
                 tripsModel.title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16.0,
               ),
               Text(
                 tripsModel.subTitle,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14.0,
                   color: Color.fromARGB(255, 133, 131, 131),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16.0,
               ),
               Text(
                 tripsModel.content,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 14.0,
                   color: Color.fromARGB(255, 133, 131, 131),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 64.0,
               ),
-              Text(
+              const Text(
                 "Tags",
                 style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 16.0,
               ),
-              Container(
+              SizedBox(
                 height: 48.0,
                 child: ListView.builder(
                     itemCount: tripsModel.tags.length,
@@ -75,7 +75,7 @@ class TrigsCardDetailView extends StatelessWidget {
                                 ElevatedButton.styleFrom(primary: Colors.black),
                             child: Row(
                               children: [
-                                Icon(Icons.tag),
+                                const Icon(Icons.tag),
                                 Text(tripsModel.tags[index].title),
                               ],
                             )),

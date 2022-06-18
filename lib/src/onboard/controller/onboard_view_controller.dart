@@ -38,7 +38,7 @@ class OnboardViewController extends GetxController {
         );
       }
     } else if (onboardModelList.length > pageIndacatorIndex.value) {
-      Get.to(() => LoginView());
+      Get.to(() => const LoginView());
     }
   }
 

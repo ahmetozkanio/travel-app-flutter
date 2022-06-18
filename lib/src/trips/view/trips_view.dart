@@ -19,13 +19,13 @@ class TripsView extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Container(
+                  SizedBox(
                     width: 295,
                     height: 40,
                     child: TextFormField(
                       textAlignVertical: TextAlignVertical.bottom,
                       cursorColor: Colors.black,
-                      decoration: InputDecoration(
+                      decoration: const InputDecoration(
                         prefixIcon: Icon(
                           Icons.search,
                           color: Color.fromARGB(255, 109, 109, 109),
@@ -33,7 +33,7 @@ class TripsView extends StatelessWidget {
                         hintText: "search",
                         focusedBorder: OutlineInputBorder(),
                         border: OutlineInputBorder(
-                          borderSide: const BorderSide(color: Colors.black),
+                          borderSide: BorderSide(color: Colors.black),
                         ),
                       ),
                     ),
@@ -46,18 +46,18 @@ class TripsView extends StatelessWidget {
                 ],
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: SizedBox(
                 height: 16.0,
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: Text(
                 "Uncomming Meetups",
                 style: TextStyle(fontSize: 32.0, fontWeight: FontWeight.bold),
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: SizedBox(
                 height: 16.0,
               ),
@@ -68,40 +68,40 @@ class TripsView extends StatelessWidget {
                 children: [
                   Container(
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 203, 227, 255),
+                        color: const Color.fromARGB(255, 203, 227, 255),
                         borderRadius: BorderRadius.circular(8.0)),
                     height: 64.0,
                     width: 73.75,
-                    child: Icon(Icons.camera_alt),
+                    child: const Icon(Icons.camera_alt),
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 236, 221, 255),
+                        color: const Color.fromARGB(255, 236, 221, 255),
                         borderRadius: BorderRadius.circular(8.0)),
                     height: 64.0,
                     width: 73.75,
-                    child: Icon(Icons.favorite),
+                    child: const Icon(Icons.favorite),
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 219, 245),
+                        color: const Color.fromARGB(255, 255, 219, 245),
                         borderRadius: BorderRadius.circular(8.0)),
                     height: 64.0,
                     width: 73.75,
-                    child: Icon(Icons.landscape),
+                    child: const Icon(Icons.landscape),
                   ),
                   Container(
                     decoration: BoxDecoration(
-                        color: Color.fromARGB(255, 255, 242, 174),
+                        color: const Color.fromARGB(255, 255, 242, 174),
                         borderRadius: BorderRadius.circular(8.0)),
                     height: 64.0,
                     width: 73.75,
-                    child: Icon(Icons.face),
+                    child: const Icon(Icons.face),
                   ),
                 ],
               ),
             ),
-            SliverToBoxAdapter(
+            const SliverToBoxAdapter(
               child: SizedBox(
                 height: 16.0,
               ),
@@ -151,10 +151,25 @@ Widget cityCard(context, index) {
           alignment: Alignment.bottomCenter,
           child: Container(
             height: MediaQuery.of(context).size.width / 5,
+            decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(0),
+                topRight: Radius.circular(0),
+                bottomLeft: Radius.circular(11),
+                bottomRight: Radius.circular(11),
+              ),
+              boxShadow: [
+                BoxShadow(
+                    color: Color.fromRGBO(0, 0, 0, 0.25),
+                    offset: Offset(0, 4),
+                    blurRadius: 4)
+              ],
+              color: Color.fromRGBO(255, 251, 251, 1),
+            ),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 12.0),
+                padding: const EdgeInsets.symmetric(horizontal: 12.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.center,
@@ -162,7 +177,7 @@ Widget cityCard(context, index) {
                     Text(
                       trigsCardList[index].subTitle,
                       textAlign: TextAlign.start,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 14.0,
                         color: Color.fromARGB(255, 131, 129, 129),
                         decoration: TextDecoration.none,
@@ -181,21 +196,6 @@ Widget cityCard(context, index) {
                   ],
                 ),
               ),
-            ),
-            decoration: const BoxDecoration(
-              borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(0),
-                topRight: Radius.circular(0),
-                bottomLeft: Radius.circular(11),
-                bottomRight: Radius.circular(11),
-              ),
-              boxShadow: [
-                BoxShadow(
-                    color: Color.fromRGBO(0, 0, 0, 0.25),
-                    offset: Offset(0, 4),
-                    blurRadius: 4)
-              ],
-              color: Color.fromRGBO(255, 251, 251, 1),
             ),
           ),
         ),

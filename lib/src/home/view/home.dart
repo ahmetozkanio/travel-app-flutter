@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 
 import 'package:travel_app/src/onboard/view/onboard_view.dart';
 
+import '../../theme/text_theme.dart';
+
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
 
@@ -11,10 +13,9 @@ class Home extends StatelessWidget {
     return GetMaterialApp(
       theme: ThemeData(
         primaryColor: Colors.black,
-
-        // fontFamily: "Nunito",
+        textTheme: nunitoTextTheme,
       ),
-      home: OnboardView(),
+      home: const OnboardView(),
     );
   }
 }
