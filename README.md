@@ -1,16 +1,10 @@
 # travel_app
 
-A new Flutter project.
+The design was taken for free from figma and coded as a dynamic project with flutter.
 
-## Getting Started
+![project gif](assets/project.gif)
 
-This project is a starting point for a Flutter application.
+### UI  
 
-A few resources to get you started if this is your first Flutter project:
+https://www.figma.com/file/4FjPcGVeVAqV9t7VdlFGYT/Travel-App-Template-with-Nomads-Illustrations-(Community)?node-id=568%3A63
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
